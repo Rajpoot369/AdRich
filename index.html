@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch & Earn</title>
+    <script src='//whephiwums.com/sdk.js' data-zone='9052155' data-sdk='show_9052155'></script>
+</head>
+<body>
+    <h1>Welcome to Watch & Earn</h1>
+    
+    <h2>Watch Ads & Earn</h2>
+    <button onclick="showAd()">Watch Ad & Earn</button>
+    
+    <h2>Spin & Win</h2>
+    <button onclick="spinAndWin()">Spin Now</button>
+
+    <h2>Tap to Earn</h2>
+    <button onclick="tapToEarn()">Tap & Earn</button>
+
+    <script>
+        function showAd() {
+            alert("Ad is being shown... Earn your coins!");
+            loadAd();
+        }
+
+        function spinAndWin() {
+            alert("Spinning... Wait for results!");
+            loadAd();
+            setTimeout(() => { alert("You won some coins!"); }, 2000);
+        }
+
+        function tapToEarn() {
+            alert("Tap registered... Showing ad first!");
+            loadAd();
+            setTimeout(() => { alert("Coins added!"); }, 2000);
+        }
+
+        function loadAd() {
+            var script = document.createElement('script');
+            script.src = '//whephiwums.com/sdk.js';
+            script.setAttribute('data-zone', '9052155');
+            script.setAttribute('data-sdk', 'show_9052155');
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
